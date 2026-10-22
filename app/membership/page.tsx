@@ -2,17 +2,14 @@
 
 import { useActionState } from "react"
 import { motion } from "framer-motion"
-import { Check, ArrowRight, PlayCircle, Users } from "lucide-react"
+import { ArrowRight, PlayCircle, Users } from "lucide-react"
 import { Navigation, Footer, PhotoFill, type Photo } from "@/components/site-shared"
 import { joinWaitlist } from "./actions"
 
 /* -------------------------------------------------------------------------
    OWNER-EDITABLE PLACEHOLDERS — swap these in when finalized.
-   - Prices are shown verbatim, so include the currency symbol.
    - WHOP_URL is where every "Join" button points until the portal is live.
    ------------------------------------------------------------------------- */
-  const TIER_1_PRICE = "$24" // Online Library monthly price
-  const TIER_2_PRICE = "$159" // Library + In-Salon Lessons monthly price
 // Retained for launch: swap the tier CTAs from "#waitlist" back to WHOP_URL when live.
 export const WHOP_URL = "https://whop.com/renovare" // TODO: real Whop membership link
 
@@ -128,22 +125,23 @@ function HowItWorks() {
   )
 }
 
+function PricingComingSoon({ inverted = false }: { inverted?: boolean }) {
+  return (
+    <div
+      className={`flex items-center gap-3 mb-10 mt-auto pt-6 border-t ${
+        inverted ? "border-primary-foreground/20" : "border-border"
+      }`}
+    >
+      <span
+        className={`font-serif italic text-2xl ${inverted ? "text-primary-foreground" : "text-foreground"}`}
+      >
+        Pricing coming soon
+      </span>
+    </div>
+  )
+}
+
 function MembershipTiers() {
-  const tier1Benefits = [
-    "On demand access to the full styling tutorial library",
-    "Step by step modules for blowouts, waves, curls & finishing",
-    "New tutorials added over time",
-    "Watch anytime, on any device",
-    "Cancel anytime",
-  ]
-
-  const tier2Benefits = [
-    "In person, hands on styling lessons at the salon",
-    "Taught on a mannequin head to build real technique",
-    "Personalized guidance from a Renovaré artist",
-    "The fastest way to master styling your own hair",
-  ]
-
   return (
     <section id="tiers" className="py-24 lg:py-36 bg-secondary">
       <div className="max-w-6xl mx-auto px-6 lg:px-12">
@@ -156,8 +154,8 @@ function MembershipTiers() {
           <p className="editorial-eyebrow text-xs text-primary mb-4">Choose Your Membership</p>
           <h2 className="font-serif text-4xl lg:text-6xl text-foreground mb-6">Two Ways to Learn</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Start with the online library, or add in salon lessons for hands on mastery. Month to month,
-            cancel anytime.
+            Start with the online library, or add in salon lessons for hands on mastery. Full details
+            and pricing will be shared at launch.
           </p>
         </motion.div>
 
@@ -173,21 +171,11 @@ function MembershipTiers() {
             <p className="editorial-eyebrow text-[10px] text-muted-foreground mb-2">Tier One</p>
             <h3 className="font-serif text-3xl text-foreground mb-2">Online Library</h3>
             <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
-              On demand access to every styling tutorial — learn at your own pace, from home.
+              On demand styling tutorials you can watch from home — learn at your own pace and keep
+              your look fresh between visits.
             </p>
-            <div className="flex items-end gap-2 mb-8">
-              <span className="font-serif text-5xl text-foreground">{TIER_1_PRICE}</span>
-              <span className="text-sm mb-2 text-muted-foreground">per month</span>
-            </div>
 
-            <ul className="space-y-4 mb-10 flex-1">
-              {tier1Benefits.map((benefit) => (
-                <li key={benefit} className="flex items-start gap-3">
-                  <Check className="w-4 h-4 mt-1 flex-shrink-0 text-primary" />
-                  <span className="text-sm leading-relaxed text-foreground">{benefit}</span>
-                </li>
-              ))}
-            </ul>
+            <PricingComingSoon />
 
             {/* Pre-launch: points to the waitlist. When the Whop portal is live, swap
                 href to WHOP_URL and change the label back to "Join — Online Library". */}
@@ -214,37 +202,11 @@ function MembershipTiers() {
             <p className="editorial-eyebrow text-[10px] text-primary-foreground/70 mb-2">Tier Two</p>
             <h3 className="font-serif text-3xl text-primary-foreground mb-2">Hands On</h3>
             <p className="text-sm text-primary-foreground/80 mb-6 leading-relaxed">
-              Everything in the Online Library, plus in person lessons taught on a mannequin head —
-              learn how to style hair the way a hair stylist does.
+              The online library paired with in person lessons at our Fairfax salon — for those who
+              want hands on guidance from a Renovaré artist.
             </p>
-            <div className="flex items-end gap-2 mb-8">
-              <span className="font-serif text-5xl text-primary-foreground">{TIER_2_PRICE}</span>
-              <span className="text-sm mb-2 text-primary-foreground/70">per month</span>
-            </div>
 
-            <ul className="space-y-4 mb-4">
-              <li className="flex items-start gap-3">
-                <Check className="w-4 h-4 mt-1 flex-shrink-0 text-primary-foreground" />
-                <span className="text-sm leading-relaxed text-primary-foreground/90 font-medium">
-                  Everything in the Online Library
-                </span>
-              </li>
-            </ul>
-            <p className="text-[10px] tracking-[0.25em] uppercase text-primary-foreground/60 mb-4">Plus</p>
-            <ul className="space-y-4 mb-10 flex-1">
-              {tier2Benefits.map((benefit) => (
-                <li key={benefit} className="flex items-start gap-3">
-                  <Check className="w-4 h-4 mt-1 flex-shrink-0 text-primary-foreground" />
-                  <span className="text-sm leading-relaxed text-primary-foreground/90">{benefit}</span>
-                </li>
-              ))}
-            </ul>
-
-            <p className="text-xs leading-relaxed text-primary-foreground/70 mb-6 border-t border-primary-foreground/20 pt-5">
-              In salon lessons are delivered locally, in person — this tier is for members within
-              commuting distance of our Fairfax salon. Prefer not to commit monthly? In salon lessons
-              are also available à la carte, as a single session — ask us for per class pricing.
-            </p>
+            <PricingComingSoon inverted />
 
             {/* Pre-launch: points to the waitlist. When the Whop portal is live, swap
                 href to WHOP_URL and change the label back to "Join — Hands On". */}
@@ -263,9 +225,8 @@ function MembershipTiers() {
           viewport={{ once: true }}
           className="text-center text-xs text-muted-foreground mt-10 max-w-xl mx-auto leading-relaxed"
         >
-          Membership is never required. Classes can also be attended à la carte, as single sessions —
-          per class pricing varies with the nature of the class. Join the waitlist and you&apos;ll be the
-          first to know when enrollment opens.
+          Membership is never required. Join the waitlist and you&apos;ll be the first to know when
+          enrollment and pricing are announced.
         </motion.p>
       </div>
     </section>
