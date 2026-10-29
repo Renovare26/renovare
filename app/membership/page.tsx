@@ -3,7 +3,7 @@
 import { useActionState } from "react"
 import { motion } from "framer-motion"
 import { ArrowRight, PlayCircle, Users } from "lucide-react"
-import { Navigation, Footer, PhotoFill, type Photo } from "@/components/site-shared"
+import { Navigation, Footer } from "@/components/site-shared"
 import { joinWaitlist } from "./actions"
 
 /* -------------------------------------------------------------------------
@@ -234,30 +234,14 @@ function MembershipTiers() {
 }
 
 function WhyMannequin() {
-  const photo: Photo = {
-    kind: "placeholder",
-    caption: "REAL IN-SALON MANNEQUIN LESSON — from @renovarefairfax",
-    alt: "A hands-on styling lesson taught on a mannequin head at Renovaré",
-  }
-
   return (
     <section className="py-24 lg:py-36 bg-background">
-      <div className="max-w-6xl mx-auto px-6 lg:px-12">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.98 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="photo-live relative aspect-[4/5] w-full order-2 lg:order-1"
-          >
-            <PhotoFill photo={photo} sizes="(max-width: 1024px) 90vw, 45vw" />
-          </motion.div>
-
+      <div className="max-w-3xl mx-auto px-6 lg:px-12 text-center">
+        <div>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="order-1 lg:order-2"
           >
             <p className="editorial-eyebrow text-xs text-primary mb-4">Why a Mannequin</p>
             <h2 className="font-serif text-3xl lg:text-4xl text-foreground leading-tight mb-6 text-balance">
