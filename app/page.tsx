@@ -66,11 +66,20 @@ function Hero() {
             transition={{ delay: 0.75 }}
             className="mt-10 flex flex-wrap items-center gap-x-10 gap-y-4"
           >
-            <Link
-              href="/reservations"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground text-xs tracking-[0.25em] uppercase hover:bg-primary/90 transition-colors group"
-            >
-              Reserve Your Experience
+  <a
+  href="https://phorest.com/book/salons/renovaresalon"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground text-xs tracking-[0.25em] uppercase hover:bg-primary/90 transition-colors group"
+  >
+  Reserve Online
+  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+  </a>
+  <Link
+  href="/reservations"
+  className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground text-xs tracking-[0.25em] uppercase hover:bg-primary/90 transition-colors group"
+  >
+  Request A Complimentary Virtual Consultation
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
