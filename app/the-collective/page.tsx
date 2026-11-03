@@ -174,8 +174,8 @@ export default function TheCollectivePage() {
               width={3555}
               height={3359}
               sizes="(max-width: 768px) 100vw, 768px"
-              className="w-full h-auto block"
-              priority
+  className="w-full h-auto block fade-edges"
+  priority
             />
           </div>
         </div>
