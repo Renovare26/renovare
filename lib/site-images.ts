@@ -39,7 +39,7 @@ export const IMAGES = {
   alliePortrait: "/images/team/allie.jpeg", // Allie lounging playfully in the salon chair
   emilyPortrait: "/images/team/emily.jpeg", // Emily in a maroon shirt seated in the salon chair
   annikaPortrait: "/images/team/annika.jpeg", // Annika in a grey top by the salon mirror
-  teamGroup: "/images/team/collective-group.jpeg", // the three-person "tiny but mighty" team shot
+  teamGroup: "/images/team/collective-group.jpeg", // the team at the Renovaré Muse backdrop
   workBalayageDetail: "/images/work/balayage-detail.jpeg", // close-up of dimensional balayage
   workBlowoutProfile: "/images/work/blowout-profile.jpeg", // silver-hair blow-dry, profile
   workBrunetteResult: "/images/work/brunette-result.jpeg", // finished brunette waves

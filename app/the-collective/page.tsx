@@ -170,6 +170,7 @@ export default function TheCollectivePage() {
             <PhotoFill
               photo={{ kind: "real", src: IMAGES.teamGroup, alt: "The Renovaré collective — the team together in Fairfax, Virginia" }}
               sizes="(max-width: 1152px) 100vw, 1152px"
+              className="object-top"
               priority
             />
           </div>
