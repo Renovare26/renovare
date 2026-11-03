@@ -106,7 +106,7 @@ const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "Our Story", href: "/our-story" },
   { label: "Services", href: "/services" },
-  { label: "Facials", href: "/facials" },
+  { label: "Facials & Skin", href: "/facials" },
   { label: "Membership", href: "/membership" },
   { label: "The Collective", href: "/the-collective" },
   { label: "Reserve", href: "/reservations" },
