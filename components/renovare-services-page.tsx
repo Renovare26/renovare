@@ -19,20 +19,20 @@ export const HEADER_OFFSET = 82 // px: height of the site's sticky header, so ju
  * so there are never broken images. Use real, unfiltered salon photos.
  */
 const IMAGES = {
-  hero: { src: "/images/studio/color-bar.jpeg", alt: "Inside Renovaré Salon in Fairfax, Virginia" },
+  hero: { src: "", alt: "Inside Renovaré Salon in Fairfax, Virginia" },
   experience: [
     { src: "/images/salon/relaxation-table.jpeg", alt: "Relaxation table with Renovaré Rocks painting and coloring books" },
     { src: "/images/salon/shampoo-chair.jpeg", alt: "Shiatsu massage chair at the shampoo bowl with weighted blanket" },
     { src: "", alt: "Nespresso iced latte and snacks for guests" },
   ],
   sections: {
-    cut: { src: "/images/work/precision-cut-layers.jpeg", alt: "Haircut and blowout result at Renovaré" },
-    gray: { src: "/images/work/silver-blend-bob.jpg", alt: "Gray coverage result at Renovaré" },
-    brighten: { src: "/images/work/sunkissed-blonde.jpeg", alt: "Babylights result at Renovaré" },
-    dimension: { src: "/images/work/copper-blonde-waves.jpg", alt: "Soft dimensional color result at Renovaré" },
-    balayage: { src: "/images/work/brunette-caramel-balayage.jpg", alt: "Balayage result at Renovaré" },
-    gloss: { src: "/images/work/color-glossy-melt.jpeg", alt: "Glossy, mirror-like shine at Renovaré" },
-    transform: { src: "/images/work/platinum-contrast.jpg", alt: "Platinum transformation result at Renovaré" },
+    cut: { src: "", alt: "Haircut and blowout result at Renovaré" },
+    gray: { src: "", alt: "Gray coverage result at Renovaré" },
+    brighten: { src: "", alt: "Babylights result at Renovaré" },
+    dimension: { src: "", alt: "Soft dimensional color result at Renovaré" },
+    balayage: { src: "", alt: "Balayage result at Renovaré" },
+    gloss: { src: "", alt: "Glossy, mirror-like shine at Renovaré" },
+    transform: { src: "", alt: "Platinum transformation result at Renovaré" },
     health: { src: "", alt: "Healthy, restored hair at Renovaré" },
   } as Record<string, { src: string; alt: string }>,
 }
