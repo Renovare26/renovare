@@ -724,7 +724,7 @@ export default function ServicesPage() {
         </p>
         <p className="rnv-note">
           <strong>Every coloring and highlighting experience includes</strong>{" "}a personalized consultation, toning or
-          gloss as needed, and a Signature Blowout &amp; Finish. All highlighting service starting rates include our Core Restore
+          gloss as needed, and a Signature Blowout &amp; Finish. All highlighting service starting rates include our Cor Restore
           bond building treatment. Prefer a haircut instead of the blowout? Add a
           Signature Haircut: Initiate +$30 · Signature +$30 · Artisan +$55 · Founder +$110. Prices reflect Artist
           Labor. A separate Professional Materials Investment applies to color and chemical services.
