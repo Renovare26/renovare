@@ -157,10 +157,10 @@ const MENU: Section[] = [
         "name": "Face Framing Highlights",
         "desc": "Brightness placed around the face for a lifted, luminous look with minimal commitment.",
         "price": [
-          135,
-          150,
-          175,
-          250
+          180,
+          195,
+          220,
+          295
         ]
       },
       {
@@ -195,20 +195,20 @@ const MENU: Section[] = [
         "name": "Partial Classic Highlights",
         "desc": "Soft, natural highlights through the top and part line to break up all-over color with gentle movement.",
         "price": [
-          155,
-          190,
-          220,
-          290
+          200,
+          235,
+          265,
+          335
         ]
       },
       {
         "name": "Full Classic Highlights",
         "desc": "Natural dimension placed throughout for depth and movement. Beautiful on brunette and red hair.",
         "price": [
-          205,
-          235,
-          290,
-          380
+          250,
+          280,
+          335,
+          425
         ]
       }
     ],
@@ -224,20 +224,20 @@ const MENU: Section[] = [
         "name": "Partial Balayage",
         "desc": "Hand-painted brightness through the top and face frame for an effortless, sun-kissed look.",
         "price": [
-          195,
-          225,
-          250,
-          375
+          240,
+          270,
+          295,
+          420
         ]
       },
       {
         "name": "Full Balayage",
         "desc": "Hand-painted dimension throughout for seamless, low-maintenance color you'll love for months.",
         "price": [
-          235,
-          260,
-          300,
-          425
+          280,
+          305,
+          345,
+          470
         ]
       }
     ]
@@ -723,8 +723,9 @@ export default function ServicesPage() {
           <strong>Brunette, red, blonde, or silver,</strong> every color service is custom-formulated for your shade.
         </p>
         <p className="rnv-note">
-          <strong>Every coloring and highlighting experience includes</strong> a personalized consultation, toning or
-          gloss as needed, and a Signature Blowout &amp; Finish. Prefer a haircut instead of the blowout? Add a
+          <strong>Every coloring and highlighting experience includes</strong>{" "}a personalized consultation, toning or
+          gloss as needed, and a Signature Blowout &amp; Finish. All highlighting service starting rates include our Core Restore
+          bond building treatment. Prefer a haircut instead of the blowout? Add a
           Signature Haircut: Initiate +$30 · Signature +$30 · Artisan +$55 · Founder +$110. Prices reflect Artist
           Labor. A separate Professional Materials Investment applies to color and chemical services.
         </p>
