@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import { Navigation, Footer, PhotoPlaceholder, PhotoFill } from "@/components/site-shared"
 import { IMAGES } from "@/lib/site-images"
 
@@ -166,11 +167,15 @@ export default function TheCollectivePage() {
 
       <section className="px-6 lg:px-12 pb-16 lg:pb-24">
         <div className="max-w-6xl mx-auto">
-          <div className="photo-live relative aspect-[16/10] sm:aspect-[16/8] lg:aspect-[16/7] overflow-hidden">
-            <PhotoFill
-              photo={{ kind: "real", src: IMAGES.teamGroup, alt: "The Renovaré collective — the team together in Fairfax, Virginia" }}
-              sizes="(max-width: 1152px) 100vw, 1152px"
-              priority
+          <div className="photo-live max-w-3xl mx-auto overflow-hidden">
+            <Image
+              src={IMAGES.teamGroup}
+              alt="The Renovaré collective — four team members together in front of the Renovaré Muse backdrop"
+              width={3555}
+              height={3359}
+              sizes="(max-width: 768px) 100vw, 768px"
+  className="w-full h-auto block fade-edges"
+  priority
             />
           </div>
         </div>
