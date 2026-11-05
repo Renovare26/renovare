@@ -107,7 +107,7 @@ const NAV_LINKS = [
   { label: "Our Story", href: "/our-story" },
   { label: "Services", href: "/services" },
   { label: "Facials & Skin", href: "/facials" },
-  { label: "Membership", href: "/membership" },
+  { label: "Classes & Membership", href: "/membership" },
   { label: "The Collective", href: "/the-collective" },
   { label: "Reserve", href: "/reservations" },
 ]
